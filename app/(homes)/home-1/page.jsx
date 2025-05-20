@@ -18,9 +18,9 @@ import Testimonials from "@/components/common/testimonials/Testimonials2";
 import DownloadApp from "@/components/common/downloadApp/DownloadApp";
 export const metadata = {
   title:
-    "Home 1 || Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+    "Home 1 || Bone Travel Services",
   description:
-    "Lixride Chauffeur Limousine Transport and Car Hire Nextjs Template",
+    "Bone Travel Services",
 };
 export default function Home() {
   return (
