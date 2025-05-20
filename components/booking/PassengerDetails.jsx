@@ -3,6 +3,15 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import SideBar from "./SideBar";
 import Link from "next/link";
+import Pagination from "../common/Pagination";
+import { cars, features } from "@/data/cars";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import DatePickerComponent from "@/components/common/DatePicker";
+import PlacePicker from "@/components/common/PlacePicker";
+import TimePickerComponent from "@/components/common/TimePicker";
+import PlaceFinderBlank from "@/components/common/PlaceFinderBlank";
 
 export default function PassengerDetails() {
   const [passengerDetails, setPassengerDetails] = useState({
