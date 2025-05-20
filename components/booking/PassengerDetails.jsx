@@ -21,6 +21,15 @@ export default function PassengerDetails() {
     luggageCount: "",
     notes: "",
   });
+
+    const [distance, setDistance] = useState("0.00");  
+    const [placeInput, setPlaceInput] = useState("");
+    const [origin, setOrigin] = useState(null); // Optional: could be from PlacePicker
+    const [destination, setDestination] = useState(null);
+    const BASE_PRICE = 40;
+  const PER_KM_PRICE = 1.2;
+  const totalPrice = Math.max(BASE_PRICE, distance * PER_KM_PRICE).toFixed(2);
+
   const router = useRouter(); // Initialize router for programmatic navigation
 
   useEffect(() => {
@@ -34,6 +43,20 @@ export default function PassengerDetails() {
           this?.closest(".form-group").classList.add("focused");
         });
       });
+
+      // Set default origin ONLY
+    setOrigin({
+      lat: 45.8150, // e.g., Zagreb center
+      lng: 15.9819,
+    });
+  
+    // Keep this part for preserving the input
+    const params = new URLSearchParams(window.location.search);
+    const inputValue = params.get("input");
+    if (inputValue) {
+      setPlaceInput(inputValue);
+    };
+  
 
     // Blur event
     document
