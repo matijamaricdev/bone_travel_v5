@@ -244,6 +244,65 @@ export default function PassengerDetails() {
           </div>
         </div>
       </div>
+      <div className="box-tab-right">
+      <div className="sidebar">
+        <div className="d-flex align-items-center justify-content-between wow fadeInUp">
+          <h6 className="text-20-medium color-text">Ride Summary</h6>
+        </div>
+        <div className="mt-20 wow fadeInUp">
+          <ul className="list-routes">
+            <li>
+              <span className="location-item">A </span>
+              <span className="info-location text-14-medium">
+              <PlacePicker onSelect={setOrigin} />
+              </span>
+            </li>
+            <li>
+              <span className="location-item">B </span>
+              <span className="info-location text-14-medium"><PlaceFinderBlank 
+                    onSelect={setDestination}
+                    defaultValue={placeInput}
+                  /></span>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-20 wow fadeInUp">
+          <ul className="list-icons">
+            <li>
+              <span className="icon-item icon-plan"> </span>
+              <span className="info-location text-14-medium">
+                <DatePickerComponent />
+              </span>
+            </li>
+            <li>
+              <span className="icon-item icon-time"></span>
+              <span className="info-location text-14-medium"><TimePickerComponent /></span>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-20 wow fadeInUp">
+          <div className="box-map-route">
+          <iframe
+                className="map-contact"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d11120.727283665392!2d16.142688!3d45.827642000000004!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDQ5JzM3LjAiTiAxNsKwMDgnMzIuNiJF!5e0!3m2!1sen!2sus!4v1744805782391!5m2!1sen!2sus"
+                style={{ border: "0px" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+             ></iframe>
+          </div>
+          <div className="box-info-route">
+            <div className="info-route-left">
+              <span className="text-14 color-grey">Total Distance</span>
+              <span className="text-14-medium color-text">
+                {totalPrice} €
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    </div>
+    
   );
 }
