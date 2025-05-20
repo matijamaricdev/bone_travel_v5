@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import SideBar from "./SideBar";
-import Link from "next/link";
 import Pagination from "../common/Pagination";
 import { cars, features } from "@/data/cars";
 import Image from "next/image";
